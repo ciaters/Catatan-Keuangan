@@ -1,0 +1,25 @@
+<resources>
+    <string name="app_name">Catatan Keuangan</string>
+
+    <!-- Judul 8 Halaman -->
+    <string name="page_beranda">Beranda</string>
+    <string name="page_income">Income</string>
+    <string name="page_transaksi">Transaksi</string>
+    <string name="page_statistik">Statistik</string>
+    <string name="page_posisi_saldo">Posisi Saldo</string>
+    <string name="page_ringkasan_keuangan">Ringkasan Keuangan</string>
+    <string name="page_tagihan_kewajiban">Tagihan dan Kewajiban</string>
+    <string name="page_pengaturan">Pengaturan</string>
+
+    <!-- Label Navigasi -->
+    <string name="nav_menu_lain">Lainnya</string>
+    <string name="nav_buka_menu">Buka menu navigasi</string>
+    <string name="nav_kembali">Kembali</string>
+    <string name="drawer_subtitle">Navigasi Utama • Penyimpanan Lokal</string>
+    <string name="sheet_title_lainnya">Halaman Lainnya</string>
+
+    <!-- Deskripsi Aksesibilitas & Umum -->
+    <string name="cd_ikon_halaman">Ikon halaman</string>
+    <string name="cd_visibilitas_saldo">Ubah visibilitas nominal saldo</string>
+    <string name="tutup">Tutup</string>
+</resources>
