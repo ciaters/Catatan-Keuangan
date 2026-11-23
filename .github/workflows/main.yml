@@ -27,9 +27,12 @@ jobs:
           gradle-version: '9.3.1'
 
       - name: Create .env and .env.example files
+        env:
+          MY_KEY: ${{ secrets.GEMINI_API_KEY }}
         run: |
-          echo 'GEMINI_API_KEY="${{ secrets.GEMINI_API_KEY || '"'"'dummy_key'"'"' }}"' > .env
-          echo 'GEMINI_API_KEY="dummy_key"' > .env.example
+          if [ -z "$MY_KEY" ]; then MY_KEY="dummy_key"; fi
+          echo "GEMINI_API_KEY=\"$MY_KEY\"" > .env
+          echo "GEMINI_API_KEY=\"dummy_key\"" > .env.example
 
       - name: Build Debug APK
         run: gradle assembleDebug --no-build-cache
