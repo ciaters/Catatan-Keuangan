@@ -1,0 +1,6 @@
+{
+  "name": "Catatan Keuangan",
+  "description": "Aplikasi pencatat keuangan pribadi berbahasa Indonesia dengan tema terang, tampilan rapi, dan navigasi lengkap 8 halaman.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
