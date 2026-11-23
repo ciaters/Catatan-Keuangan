@@ -12,6 +12,9 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v4
 
+      - name: Remove temp.txt files
+        run: find . -name "temp.txt" -type f -delete
+
       - name: Set up JDK 21
         uses: actions/setup-java@v4
         with:
