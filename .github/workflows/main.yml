@@ -28,11 +28,11 @@ jobs:
 
       - name: Create .env and .env.example files
         run: |
-          echo "GEMINI_API_KEY=${{ secrets.GEMINI_API_KEY }}" > .env
-          echo "GEMINI_API_KEY=" > .env.example
+          echo 'GEMINI_API_KEY="${{ secrets.GEMINI_API_KEY || '"'"'dummy_key'"'"' }}"' > .env
+          echo 'GEMINI_API_KEY="dummy_key"' > .env.example
 
       - name: Build Debug APK
-        run: gradle assembleDebug
+        run: gradle assembleDebug --no-build-cache
 
       - name: Upload APK
         uses: actions/upload-artifact@v4
