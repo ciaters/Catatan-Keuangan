@@ -23,8 +23,10 @@ jobs:
         with:
           gradle-version: '9.3.1'
 
-      - name: Create .env file
-        run: echo "GEMINI_API_KEY=${{ secrets.GEMINI_API_KEY }}" > .env
+      - name: Create .env and .env.example files
+        run: |
+          echo "GEMINI_API_KEY=${{ secrets.GEMINI_API_KEY }}" > .env
+          echo "GEMINI_API_KEY=" > .env.example
 
       - name: Build Debug APK
         run: gradle assembleDebug
